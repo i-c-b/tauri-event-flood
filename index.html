@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tauri App</title>
+    <script type="module" src="/src/main.ts" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <form class="row" id="flood-form" method="dialog">
+        <input id="count-input" placeholder="Total event count..." />
+        <button type="submit">Flood</button>
+      </form>
+
+      <p id="flood-msgs"></p>
+    </div>
+  </body>
+</html>
