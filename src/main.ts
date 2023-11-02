@@ -12,7 +12,7 @@ const handlers: Map<string, FloodHandler> = new Map();
 
 let floodStopListening: UnlistenFn | null = null;
 let countInputEl: HTMLInputElement | null;
-let _floodMsgsEl: HTMLElement | null;
+// let _floodMsgsEl: HTMLElement | null;
 
 async function floodEvents(count: number, handler?: FloodHandler) {
   const id = window.crypto.randomUUID();
@@ -42,17 +42,17 @@ async function floodEvents(count: number, handler?: FloodHandler) {
 
 window.addEventListener("DOMContentLoaded", () => {
   countInputEl = document.querySelector("#count-input");
-  _floodMsgsEl = document.querySelector("#flood-msgs");
+  // _floodMsgsEl = document.querySelector("#flood-msgs");
   document.querySelector("#flood-form")?.addEventListener("submit", (e) => {
     e.preventDefault();
-    floodEvents((countInputEl as HTMLInputElement).value as unknown as number, (_group_id, _progress, _total) => {
-      /* const child = document.createElement("p");
+    floodEvents((countInputEl as HTMLInputElement).value as unknown as number/* , (_group_id, _progress, _total) => {
+      const child = document.createElement("p");
       child.textContent = `flood ${_group_id} consumed ${_progress}/${_total} events`;
-      _floodMsgsEl?.appendChild(child); */
+      _floodMsgsEl?.appendChild(child);
       // (_floodMsgsEl as HTMLElement).textContent = `flood ${_group_id} consumed ${_progress}/${_total} events`;
-      /* if (_progress % (_total/10)) {
+      if (_progress % (_total/10)) {
         console.debug(`flood ${_group_id} consumed ${_progress}/${_total} events`);
-      } */
-    });
+      }
+    } */);
   });
 });
